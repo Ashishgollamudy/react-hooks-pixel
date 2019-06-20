@@ -1,12 +1,13 @@
 body{
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffffff;
 }
 
 .App {
   text-align: center;
 }
 
-#storageTitle{
+#Title{
   font-size: 28px;
   line-height: 36px;
   font-weight: 500;

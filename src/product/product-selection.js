@@ -8,7 +8,7 @@ export const ProductPick = ({products,selectDevice}) => {
             <div className="row">
                 <div className="col-md-4 offset-md-5">
                     <Fade left cascade>
-                        <h3>Choose your Pixel 3</h3>
+                        <h3 id="Title">Choose your Pixel 3</h3>
                     </Fade>
                 </div>
             </div>

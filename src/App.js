@@ -3,6 +3,7 @@ import { ProductPick } from './product/product-selection'
 import { productList } from './product/products';
 import { ProductStorage } from './product/product-storage';
 import { ProductCarrier } from './product/product-carrier';
+import { ProductSummary } from './product/product-summary';
 
 import './App.css';
 
@@ -27,7 +28,7 @@ function App() {
 
   const selectDevice = product => {
     setDevice(product)
-    setSummary({...summary, device: product.device })
+    setSummary({...summary, device: product.device, img: product.img })
     nextStep()
   }
 
@@ -43,6 +44,8 @@ function App() {
     nextStep()
   }
 
+  console.info(carrier);
+
   const renderApp = () => {
     switch (step) {
       case 1:
@@ -52,7 +55,7 @@ function App() {
       case 3:
         return <ProductCarrier device={device} previousStep={previousStep} storage={storage} selectCarrier={selectCarrier} />
       case 4:
-        return <h1>{`${summary.device}, ${summary.storage} - ${summary.carrier}`}</h1>
+        return <ProductSummary summary={summary} previousStep={previousStep}/>
       default:
         return <h2>Failed to load the page :( please come back.</h2>
     }
@@ -61,6 +64,19 @@ function App() {
   return (
     <React.Fragment>
       {renderApp()}
+      <div>
+        <footer className="fixed-bottom">
+          <div className="progress">
+            <div
+              className={`progress-bar progress-bar-striped bg-success w-${25*step}`}
+              role="progressbar"
+              aria-valuenow={25*step}
+              aria-valuemin="0"
+              aria-valuemax="100">
+            </div>
+          </div>
+        </footer>
+      </div>
     </React.Fragment>
   )
 }

@@ -6,7 +6,7 @@ export const ProductStorage = ({ device, previousStep, selectStorage }) => (
         <div className="row">
             <div className="col-md-4 offset-md-4 text-center">
                 <Fade left cascade>
-                    <h3>{device.device}</h3>
+                    <h2 id="Title">{device.device}</h2>
                 </Fade>
             </div>
         </div>
@@ -17,7 +17,7 @@ export const ProductStorage = ({ device, previousStep, selectStorage }) => (
             </div>
             <div className="col-md-4 text-center" style={{ marginTop: "10px" }}>
                 <Fade left cascade>
-                    <p id="storageTitle">How much storage ?</p>
+                    <p id="Title">How much storage ?</p>
                 </Fade>
             </div>
         </div>

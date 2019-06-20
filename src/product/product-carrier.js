@@ -18,7 +18,7 @@ export const ProductCarrier = ({ device, storage, previousStep, selectCarrier })
             </div>
             <div className="col-md-4 text-center" style={{ marginTop: "10px" }}>
                 <Fade left cascade>
-                    <p id="storageTitle">Which Carrier ?</p>
+                    <p id="Title">Which Carrier ?</p>
                 </Fade>
             </div>
         </div>
